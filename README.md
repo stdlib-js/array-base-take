@@ -35,45 +35,91 @@ limitations under the License.
 
 > Take elements from an array.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-base-take
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import take from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-take@deno/mod.js';
+var take = require( '@stdlib/array-base-take' );
 ```
 
-#### take( x, indices )
+#### take( x, indices, mode )
 
 Takes elements from an array.
 
 ```javascript
 var x = [ 1, 2, 3, 4 ];
 
-var y = take( x, [ 1, 3 ] );
+var y = take( x, [ 1, 3 ], 'throw' );
 // returns [ 2, 4 ]
 ```
+
+The function supports the following parameters:
+
+-   **x**: input array.
+-   **indices**: list of indices.
+-   **mode**: index [mode][@stdlib/ndarray/base/ind].
 
 If `indices` is an empty array, the function returns an empty array.
 
 ```javascript
 var x = [ 1, 2, 3, 4 ];
 
-var y = take( x, [] );
+var y = take( x, [], 'throw' );
 // returns []
 ```
+
+#### take.assign( x, indices, mode, out, stride, offset )
+
+Takes elements from an array and assigns the values to elements in a provided output array.
+
+```javascript
+var x = [ 1, 2, 3, 4 ];
+
+var out = [ 0, 0, 0, 0, 0, 0 ];
+var indices = [ 0, 0, 1, 1, 3, 3 ];
+
+var arr = take.assign( x, indices, 'throw', out, -1, out.length-1 );
+// returns [ 4, 4, 2, 2, 1, 1 ]
+
+var bool = ( arr === out );
+// returns true
+```
+
+The function supports the following parameters:
+
+-   **x**: input array.
+-   **indices**: list of indices.
+-   **mode**: index [mode][@stdlib/ndarray/base/ind].
+-   **out**: output array.
+-   **stride**: output array stride.
+-   **offset**: output array offset.
 
 </section>
 
 <!-- /.usage -->
 
 <section class="notes">
-
-## Notes
-
--   The function does **not** perform bounds checking. If an index is less than zero or greater than the maximum index of `x`, the value of the corresponding element in the output array is undefined.
 
 </section>
 
@@ -86,10 +132,10 @@ var y = take( x, [] );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import filledBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-filled-by@deno/mod.js';
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
-import linspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@deno/mod.js';
-import take from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-take@deno/mod.js';
+var filledBy = require( '@stdlib/array-base-filled-by' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
+var linspace = require( '@stdlib/array-base-linspace' );
+var take = require( '@stdlib/array-base-take' );
 
 // Generate a linearly spaced array:
 var x = linspace( 0, 100, 11 );
@@ -99,7 +145,7 @@ var N = discreteUniform( 5, 15 );
 var indices = filledBy( N, discreteUniform.factory( 0, x.length-1 ) );
 
 // Take a random sample of elements from `x`:
-var y = take( x, indices );
+var y = take( x, indices, 'throw' );
 
 console.log( x );
 console.log( indices );
@@ -127,7 +173,7 @@ console.log( y );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -157,8 +203,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/array-base-take.svg
 [npm-url]: https://npmjs.org/package/@stdlib/array-base-take
 
-[test-image]: https://github.com/stdlib-js/array-base-take/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/array-base-take/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/array-base-take/actions/workflows/test.yml/badge.svg?branch=v0.2.0
+[test-url]: https://github.com/stdlib-js/array-base-take/actions/workflows/test.yml?query=branch:v0.2.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/array-base-take/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/array-base-take?branch=main
@@ -189,6 +235,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [branches-url]: https://github.com/stdlib-js/array-base-take/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/array-base-take/main/LICENSE
+
+[@stdlib/ndarray/base/ind]: https://github.com/stdlib-js/ndarray-base-ind
 
 </section>
 
