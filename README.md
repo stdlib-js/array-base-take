@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import take from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-take@esm/index.mjs';
+import take from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-take@v0.2.1-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-take@esm/index.mjs';
+import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-take@v0.2.1-esm/index.mjs';
 ```
 
 #### take( x, indices, mode )
@@ -128,7 +128,7 @@ The function supports the following parameters:
 import filledBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-filled-by@esm/index.mjs';
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@esm/index.mjs';
 import linspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@esm/index.mjs';
-import take from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-take@esm/index.mjs';
+import take from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-take@v0.2.1-esm/index.mjs';
 
 // Generate a linearly spaced array:
 var x = linspace( 0, 100, 11 );
