@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-06-19)
+## Unreleased (2024-06-25)
+
+<section class="features">
+
+### Features
+
+-   [`760979b`](https://github.com/stdlib-js/stdlib/commit/760979b6efafb5c235daa718c17d7eb5cef82237) - add boolean dtype support to `array/base/take` [(#2453)](https://github.com/stdlib-js/stdlib/pull/2453)
+
+</section>
+
+<!-- /.features -->
 
 <section class="bug-fixes">
 
@@ -22,6 +32,7 @@
 
 <details>
 
+-   [`760979b`](https://github.com/stdlib-js/stdlib/commit/760979b6efafb5c235daa718c17d7eb5cef82237) - **feat:** add boolean dtype support to `array/base/take` [(#2453)](https://github.com/stdlib-js/stdlib/pull/2453) _(by Jaysukh Makvana, Athan Reines)_
 -   [`1093407`](https://github.com/stdlib-js/stdlib/commit/1093407be970c29959b40c2537166b4db897d070) - **fix:** add missing type _(by Athan Reines)_
 
 </details>
@@ -34,9 +45,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Jaysukh Makvana
 
 </section>
 
