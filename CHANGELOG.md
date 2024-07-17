@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-06-25)
+## Unreleased (2024-07-17)
 
 <section class="features">
 
@@ -32,6 +32,8 @@
 
 <details>
 
+-   [`8d4c46b`](https://github.com/stdlib-js/stdlib/commit/8d4c46b10ca912401e0ff0caa37a17cd3c443c2f) - **refactor:** update paths _(by Athan Reines)_
+-   [`18b3c79`](https://github.com/stdlib-js/stdlib/commit/18b3c79c5035c7082618b7379cd6576e64393a96) - **refactor:** update paths _(by Athan Reines)_
 -   [`760979b`](https://github.com/stdlib-js/stdlib/commit/760979b6efafb5c235daa718c17d7eb5cef82237) - **feat:** add boolean dtype support to `array/base/take` [(#2453)](https://github.com/stdlib-js/stdlib/pull/2453) _(by Jaysukh Makvana, Athan Reines)_
 -   [`1093407`](https://github.com/stdlib-js/stdlib/commit/1093407be970c29959b40c2537166b4db897d070) - **fix:** add missing type _(by Athan Reines)_
 
