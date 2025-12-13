@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-09-21)
+## Unreleased (2025-12-13)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`e7292ba`](https://github.com/stdlib-js/stdlib/commit/e7292bab3952c64edf9b66f89a8a2d803f0fbaf8) - **bench:** refactor to use string interpolation in `array/base/take` [(#9026)](https://github.com/stdlib-js/stdlib/pull/9026) _(by DivitJain26, Philipp Burckhardt)_
 -   [`3dc5f1e`](https://github.com/stdlib-js/stdlib/commit/3dc5f1ef335565c05ee4be5878de5b587c7f28d6) - **docs:** fix require paths for complex arrays _(by Philipp Burckhardt)_
 -   [`b6b1bb1`](https://github.com/stdlib-js/stdlib/commit/b6b1bb1cac8664502e870976f41dc3d1143e229c) - **refactor:** update import paths _(by Athan Reines)_
 
@@ -25,9 +26,10 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   DivitJain26
 -   Philipp Burckhardt
 
 </section>
