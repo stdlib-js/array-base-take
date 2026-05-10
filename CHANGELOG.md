@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-04-21)
+## Unreleased (2026-05-10)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`02f0b0f`](https://github.com/stdlib-js/stdlib/commit/02f0b0fc4c6b8913d3bb30a33de136627757843d) - **docs:** fix `Complex64Array` import in `array/base/take` [(#12066)](https://github.com/stdlib-js/stdlib/pull/12066) _(by Karan Anand)_
 -   [`81e87d4`](https://github.com/stdlib-js/stdlib/commit/81e87d4457c65ba7481c7ab3701d2ee97d50c052) - **bench:** refactor to use string interpolation in `array` [(#11413)](https://github.com/stdlib-js/stdlib/pull/11413) _(by Karan Anand)_
 
 </details>
